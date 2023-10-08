@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Events
+namespace EventsInProcessByMediator
 {
     public class Program
     {

@@ -1,9 +1,10 @@
-﻿using MediatR;
+﻿using EventsInProcessByMediator;
+using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Events.Handlers
+namespace EventsInProcessByMediator.Handlers
 {
     public class SendEmailOnNewOrder : INotificationHandler<NewOrderEvent>
     {

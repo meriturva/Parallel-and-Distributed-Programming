@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace Events
+namespace EventsInProcessByMediator
 {
     public class NewOrderEvent : INotification
     {
