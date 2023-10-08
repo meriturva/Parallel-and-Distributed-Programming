@@ -1,5 +1,4 @@
 using MediatR;
-using MediatR.NotificationPublishers;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 

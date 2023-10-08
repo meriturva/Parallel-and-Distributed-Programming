@@ -1,7 +1,6 @@
-﻿using System.Threading.Channels;
+﻿using System;
+using System.Threading.Channels;
 using System.Threading.Tasks;
-using System;
-using System.Threading;
 
 namespace EventsOutOfProcess
 {
