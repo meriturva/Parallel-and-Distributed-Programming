@@ -11,9 +11,10 @@ namespace MicroserviceB.Controllers
         [HttpGet]
         public long Get()
         {
+            Console.WriteLine("Elaborating request");
             var result = Random.Shared.Next(0, 100);
             Thread.Sleep(1000);
-            Console.WriteLine(result);
+            Console.WriteLine($"Elaborated request with result: {result}");
             return result;
         }
     }
