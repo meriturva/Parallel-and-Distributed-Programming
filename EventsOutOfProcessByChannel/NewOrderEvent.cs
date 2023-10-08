@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EventsOutOfProcess
+namespace EventsOutOfProcessByChannel
 {
     public class NewOrderEvent
     {

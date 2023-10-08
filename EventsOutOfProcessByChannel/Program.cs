@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace EventsOutOfProcess
+namespace EventsOutOfProcessByChannel
 {
     public class Program
     {
@@ -27,9 +26,6 @@ namespace EventsOutOfProcess
             // Configure the HTTP request pipeline.
 
             app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
 
             app.MapControllers();
 

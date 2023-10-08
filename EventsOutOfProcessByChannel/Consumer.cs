@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace EventsOutOfProcess
+namespace EventsOutOfProcessByChannel
 {
     public class Consumer
     {
@@ -13,7 +14,9 @@ namespace EventsOutOfProcess
                 // May throw ChannelClosedException if
                 // the parent channel's writer signals complete.
                 var @event = await reader.ReadAsync();
-                //Thread.Sleep(10000);
+                // Simulate some work
+                Console.WriteLine($"Event elaborating {@event.Created}");
+                Thread.Sleep(5000);
                 Console.WriteLine($"Event comsumed {@event.Created}");
             }
         }
