@@ -14,7 +14,7 @@ namespace EventsOutOfProcess
                 // the parent channel's writer signals complete.
                 var @event = await reader.ReadAsync();
                 //Thread.Sleep(10000);
-                Console.WriteLine(@event);
+                Console.WriteLine($"Event comsumed {@event.Created}");
             }
         }
     }

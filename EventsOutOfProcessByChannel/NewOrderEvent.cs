@@ -1,9 +1,8 @@
-﻿using MediatR;
-using System;
+﻿using System;
 
 namespace EventsOutOfProcess
 {
-    public class NewOrderEvent : INotification
+    public class NewOrderEvent
     {
         public DateTime Created = DateTime.Now;
     }

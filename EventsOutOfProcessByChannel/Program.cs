@@ -15,12 +15,6 @@ namespace EventsOutOfProcess
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddMediatR(cfg =>
-            {
-                cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
-                // To make execution in parallel
-                //cfg.NotificationPublisherType = typeof(TaskWhenAllPublisher);
-            });
 
             // Create channel
             var channel = Channel.CreateUnbounded<NewOrderEvent>();
