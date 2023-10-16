@@ -1,6 +1,5 @@
 using EventsOutOfProcessByDatabaseShared;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Text.Json;
 using System.Threading.Tasks;
 

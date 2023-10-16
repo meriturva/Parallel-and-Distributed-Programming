@@ -1,13 +1,9 @@
 ﻿using EventsOutOfProcessByDatabaseShared;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Formats.Asn1;
-using System.Linq;
 using System.Reflection;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace EventsOutOfProcessByDatabaseConsumer
