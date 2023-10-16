@@ -17,7 +17,7 @@ namespace EventsOutOfProcessByChannel
                 // Simulate some work
                 Console.WriteLine($"Event elaborating {@event.Created}");
                 Thread.Sleep(5000);
-                Console.WriteLine($"Event comsumed {@event.Created}");
+                Console.WriteLine($"Event elaborated {@event.Created}");
             }
         }
     }
