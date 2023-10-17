@@ -1,4 +1,6 @@
-﻿using RabbitMQ.Client;
+﻿using ProtoBuf;
+using RabbitMQ.Client;
+using System;
 using System.Text;
 using System.Text.Json;
 
@@ -18,8 +20,16 @@ namespace EventsOutOfProcessByMessageBrokerShared
                                  autoDelete: false,
                                  arguments: null);
 
+            // Standard json serializer
             string message = JsonSerializer.Serialize(@event, typeof(NewOrderEvent));
-            var body = Encoding.UTF8.GetBytes(message);
+            var bodyBytes = Encoding.UTF8.GetBytes(message);
+
+            //byte[] bodyBytes;
+            //using (var memory = new MemoryStream())
+            //{
+            //    Serializer.Serialize(memory, @event);
+            //    bodyBytes = memory.ToArray();
+            //}
 
             var properties = channel.CreateBasicProperties();
             properties.Persistent = true;
@@ -27,7 +37,7 @@ namespace EventsOutOfProcessByMessageBrokerShared
             channel.BasicPublish(exchange: string.Empty,
                      routingKey: "task_queue",
                      basicProperties: properties,
-                     body: body);
+                     body: bodyBytes);
 
         }
     }
