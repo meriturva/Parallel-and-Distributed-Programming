@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsOutOfProcessByMessage
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsOutOfProcessByMessageBrokerConsumer", "EventsOutOfProcessByMessageBrokerConsumer\EventsOutOfProcessByMessageBrokerConsumer.csproj", "{27A85BAA-C0BE-4AD6-A184-A8143416B050}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08", "08", "{B1DF5F7C-C5A5-43F2-A5EC-769F161D2C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceAgRPC", "MicroserviceAgRPC\MicroserviceAgRPC.csproj", "{9D6E0017-7DF4-4A24-AEF2-DCE19456F9B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +99,10 @@ Global
 		{27A85BAA-C0BE-4AD6-A184-A8143416B050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27A85BAA-C0BE-4AD6-A184-A8143416B050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27A85BAA-C0BE-4AD6-A184-A8143416B050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D6E0017-7DF4-4A24-AEF2-DCE19456F9B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D6E0017-7DF4-4A24-AEF2-DCE19456F9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D6E0017-7DF4-4A24-AEF2-DCE19456F9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D6E0017-7DF4-4A24-AEF2-DCE19456F9B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +120,7 @@ Global
 		{7E95A8FF-836A-48BA-B7C0-9E166102F8A9} = {10A81E8C-62F3-418B-8BFB-FF03B01442FE}
 		{58D0499D-0AF6-49EE-8307-8DD4B801707F} = {10A81E8C-62F3-418B-8BFB-FF03B01442FE}
 		{27A85BAA-C0BE-4AD6-A184-A8143416B050} = {10A81E8C-62F3-418B-8BFB-FF03B01442FE}
+		{9D6E0017-7DF4-4A24-AEF2-DCE19456F9B1} = {B1DF5F7C-C5A5-43F2-A5EC-769F161D2C8C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC0BE93-F844-4FD4-AC26-C56EF6D9EC4F}

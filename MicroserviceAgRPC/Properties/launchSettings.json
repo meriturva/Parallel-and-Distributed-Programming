@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "MicroserviceAgRPC": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5189;https://localhost:7037",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
