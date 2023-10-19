@@ -13,9 +13,9 @@ services:
     ports:
       - 16686:16686
       - 4318:4318
-    environment:
-      - COLLECTOR_OTLP_ENABLED=true
-      - collector.otlp.enabled=true
+      - 4317:4317
+    command:
+      - "--collector.otlp.enabled"
     networks:
       - net
 

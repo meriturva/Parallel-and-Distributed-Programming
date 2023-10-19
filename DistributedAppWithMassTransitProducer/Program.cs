@@ -1,7 +1,9 @@
 using MassTransit;
 using MassTransit.Logging;
+using MassTransit.Monitoring;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using System;
@@ -36,18 +38,24 @@ namespace DistributedAppWithMassTransitProducer
                                 serviceVersion: "MyVersion",
                                 serviceInstanceId: Environment.MachineName);
                 })
-                .WithTracing(b => b
+                .WithTracing(builder => builder
                     .AddSource(DiagnosticHeaders.DefaultListenerName) // MassTransit ActivitySource
                     .AddAspNetCoreInstrumentation()
                     .AddConsoleExporter()
-                    .AddOtlpExporter()
-                    //.AddOtlpExporter(opts =>
-                    //{
-                    //    opts.Endpoint = new Uri("http://localhost:4318");
-                    //    //opts.Protocol = OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf;
-                    //    opts.ExportProcessorType = OpenTelemetry.ExportProcessorType.Simple;
-                    //})
-                );
+                    .AddOtlpExporter(opt =>
+                    {
+                        opt.Endpoint = new Uri("http://localhost:4317");
+                    })
+                )
+                .WithMetrics(builder => builder
+                    .AddMeter(InstrumentationOptions.MeterName)
+                    .AddAspNetCoreInstrumentation()
+                    .AddConsoleExporter()
+                    .AddOtlpExporter(opt =>
+                    {
+                        opt.Endpoint = new Uri("http://localhost:4317");
+                    })
+            );
 
             builder.Services.AddControllers();
 

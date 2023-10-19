@@ -1,5 +1,11 @@
 ﻿using MassTransit;
+using MassTransit.Logging;
+using MassTransit.Monitoring;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 using System;
 using System.Threading.Tasks;
 
@@ -38,6 +44,32 @@ namespace DistributedAppWithMassTransitConsumer
                               cfg.ConfigureEndpoints(context);
                           });
                       });
+
+                      services.AddOpenTelemetry()
+                           .ConfigureResource(r =>
+                           {
+                               r.AddService("MassTransit Consumer",
+                                           serviceVersion: "MyVersion",
+                                           serviceInstanceId: Environment.MachineName);
+                           })
+                           .WithTracing(builder => builder
+                               .AddSource(DiagnosticHeaders.DefaultListenerName) // MassTransit ActivitySource
+                               .AddAspNetCoreInstrumentation()
+                               .AddConsoleExporter()
+                               .AddOtlpExporter(opt =>
+                               {
+                                   opt.Endpoint = new Uri("http://localhost:4317");
+                               })
+                           )
+                           .WithMetrics(builder => builder
+                               .AddMeter(InstrumentationOptions.MeterName)
+                               .AddAspNetCoreInstrumentation()
+                               .AddConsoleExporter()
+                               .AddOtlpExporter(opt =>
+                               {
+                                   opt.Endpoint = new Uri("http://localhost:4317");
+                               })
+                       );
                   });
     }
 }

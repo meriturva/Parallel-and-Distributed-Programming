@@ -25,5 +25,18 @@ namespace DistributedAppWithMassTransitProducer.Controllers
 
             await _bus.Publish(@event);
         }
+
+        [HttpGet("massive")]
+        public async Task MassiveNewOrderAsync()
+        {
+            for (int i = 0; i < 1000; i++)
+            {
+                // Produce a new event and sent to channel
+                var @event = new NewOrderEvent();
+                @event.UserEmail = $"diego_{i}@bonura.dev";
+
+                await _bus.Publish(@event);
+            }
+        }
     }
 }
