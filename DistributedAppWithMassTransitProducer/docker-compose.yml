@@ -2,10 +2,20 @@ version: '3.2'
 
 services:
   rabbitmq:
-    image: rabbitmq:3.9.29-management-alpine
+    image: rabbitmq:management-alpine
     ports:
       - 5672:5672
       - 15672:15672
+    networks:
+      - net
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - 16686:16686
+      - 4318:4318
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+      - collector.otlp.enabled=true
     networks:
       - net
 

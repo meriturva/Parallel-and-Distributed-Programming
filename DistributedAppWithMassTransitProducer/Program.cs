@@ -1,6 +1,10 @@
 using MassTransit;
+using MassTransit.Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
+using System;
 
 namespace DistributedAppWithMassTransitProducer
 {
@@ -16,7 +20,8 @@ namespace DistributedAppWithMassTransitProducer
                 // elided...
                 x.UsingRabbitMq((context, cfg) =>
                 {
-                    cfg.Host("localhost", "/", h => {
+                    cfg.Host("localhost", "/", h =>
+                    {
                         h.Username("guest");
                         h.Password("guest");
                     });
@@ -24,8 +29,27 @@ namespace DistributedAppWithMassTransitProducer
                 });
             });
 
-            builder.Services.AddControllers();
+            builder.Services.AddOpenTelemetry()
+                .ConfigureResource(r =>
+                {
+                    r.AddService("MassTransit Producer",
+                                serviceVersion: "MyVersion",
+                                serviceInstanceId: Environment.MachineName);
+                })
+                .WithTracing(b => b
+                    .AddSource(DiagnosticHeaders.DefaultListenerName) // MassTransit ActivitySource
+                    .AddAspNetCoreInstrumentation()
+                    .AddConsoleExporter()
+                    .AddOtlpExporter()
+                    //.AddOtlpExporter(opts =>
+                    //{
+                    //    opts.Endpoint = new Uri("http://localhost:4318");
+                    //    //opts.Protocol = OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf;
+                    //    opts.ExportProcessorType = OpenTelemetry.ExportProcessorType.Simple;
+                    //})
+                );
 
+            builder.Services.AddControllers();
 
             var app = builder.Build();
 
