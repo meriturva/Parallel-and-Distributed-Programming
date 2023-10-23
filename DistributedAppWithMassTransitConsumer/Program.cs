@@ -46,31 +46,34 @@ namespace DistributedAppWithMassTransitConsumer
                       });
 
                       // Observability
-                      //services.AddOpenTelemetry()
-                      //     .ConfigureResource(r =>
-                      //     {
-                      //         r.AddService("MassTransit Consumer",
-                      //                     serviceVersion: "MyVersion",
-                      //                     serviceInstanceId: Environment.MachineName);
-                      //     })
-                      //     .WithTracing(builder => builder
-                      //         .AddSource(DiagnosticHeaders.DefaultListenerName) // MassTransit ActivitySource
-                      //         .AddAspNetCoreInstrumentation()
-                      //         .AddConsoleExporter()
-                      //         .AddOtlpExporter(opt =>
-                      //         {
-                      //             opt.Endpoint = new Uri("http://localhost:4317");
-                      //         })
-                      //     )
-                      //     .WithMetrics(builder => builder
-                      //         .AddMeter(InstrumentationOptions.MeterName)
-                      //         .AddAspNetCoreInstrumentation()
-                      //         .AddConsoleExporter()
-                      //         .AddOtlpExporter(opt =>
-                      //         {
-                      //             opt.Endpoint = new Uri("http://localhost:4317");
-                      //         })
-                      // );
+                      services.AddOpenTelemetry()
+                           .ConfigureResource(r =>
+                           {
+                               r.AddService("MassTransit Consumer",
+                                           serviceVersion: "MyVersion",
+                                           serviceInstanceId: Environment.MachineName);
+                           })
+                            .WithTracing(builder => builder
+                                .SetSampler(new AlwaysOnSampler())
+                                .AddAspNetCoreInstrumentation()
+                                .AddHttpClientInstrumentation()
+                                .AddSource(DiagnosticHeaders.DefaultListenerName) // MassTransit ActivitySource
+                                .AddConsoleExporter()
+                                .AddOtlpExporter(opt =>
+                                {
+                                    opt.Endpoint = new Uri("http://localhost:4317");
+                                })
+                            )
+                           .WithMetrics(builder => builder
+                               .AddAspNetCoreInstrumentation()
+                               .AddHttpClientInstrumentation()
+                               .AddMeter(InstrumentationOptions.MeterName)
+                               .AddConsoleExporter()
+                               .AddOtlpExporter(opt =>
+                               {
+                                   opt.Endpoint = new Uri("http://localhost:4317");
+                               })
+                       );
                   });
     }
 }

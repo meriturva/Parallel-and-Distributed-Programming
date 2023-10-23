@@ -35,7 +35,7 @@ namespace EventsOutOfProcessByDatabaseConsumer
                 Console.WriteLine($"Received from {@event.UserEmail}");
 
                 await Task.Delay(100);
-
+                //throw new Exception("AAA");
                 channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
             };
 

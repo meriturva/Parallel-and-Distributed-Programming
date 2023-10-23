@@ -21,15 +21,15 @@ namespace EventsOutOfProcessByMessageBrokerShared
                                  arguments: null);
 
             // Standard json serializer
-            string message = JsonSerializer.Serialize(@event, typeof(NewOrderEvent));
-            var bodyBytes = Encoding.UTF8.GetBytes(message);
+            //string message = JsonSerializer.Serialize(@event, typeof(NewOrderEvent));
+            //var bodyBytes = Encoding.UTF8.GetBytes(message);
 
-            //byte[] bodyBytes;
-            //using (var memory = new MemoryStream())
-            //{
-            //    Serializer.Serialize(memory, @event);
-            //    bodyBytes = memory.ToArray();
-            //}
+            byte[] bodyBytes;
+            using (var memory = new MemoryStream())
+            {
+                Serializer.Serialize(memory, @event);
+                bodyBytes = memory.ToArray();
+            }
 
             var properties = channel.CreateBasicProperties();
             properties.Persistent = true;
