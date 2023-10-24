@@ -47,11 +47,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceAgRPC", "Micros
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09", "09", "{79133F90-413B-489E-A965-83F13A7944A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedAppWithMassTransitProducer", "DistributedAppWithMassTransitProducer\DistributedAppWithMassTransitProducer.csproj", "{7BF56FFB-ED00-42CE-9118-EB366D6A51A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedAppWithMassTransitProducer", "DistributedAppWithMassTransitProducer\DistributedAppWithMassTransitProducer.csproj", "{7BF56FFB-ED00-42CE-9118-EB366D6A51A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedAppWithMassTransitShared", "DistributedAppWithMassTransitShared\DistributedAppWithMassTransitShared.csproj", "{96DCDBD6-C8DA-4A9C-9177-E6E78D8B8A83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedAppWithMassTransitShared", "DistributedAppWithMassTransitShared\DistributedAppWithMassTransitShared.csproj", "{96DCDBD6-C8DA-4A9C-9177-E6E78D8B8A83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedAppWithMassTransitConsumer", "DistributedAppWithMassTransitConsumer\DistributedAppWithMassTransitConsumer.csproj", "{51E970B1-2E25-480C-ADA0-B715436E93DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedAppWithMassTransitConsumer", "DistributedAppWithMassTransitConsumer\DistributedAppWithMassTransitConsumer.csproj", "{51E970B1-2E25-480C-ADA0-B715436E93DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10", "10", "{5F1A5DE0-F014-429F-A370-AF643D7BF600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedLockWithRedisA", "DistributedLockWithRedisA\DistributedLockWithRedisA.csproj", "{5675FFDD-A477-4695-A2DA-CE2D2EC2A810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedLockWithRedisB", "DistributedLockWithRedisB\DistributedLockWithRedisB.csproj", "{118516CE-3631-4553-BC12-656F35CE97CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +129,14 @@ Global
 		{51E970B1-2E25-480C-ADA0-B715436E93DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51E970B1-2E25-480C-ADA0-B715436E93DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51E970B1-2E25-480C-ADA0-B715436E93DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5675FFDD-A477-4695-A2DA-CE2D2EC2A810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5675FFDD-A477-4695-A2DA-CE2D2EC2A810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5675FFDD-A477-4695-A2DA-CE2D2EC2A810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5675FFDD-A477-4695-A2DA-CE2D2EC2A810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{118516CE-3631-4553-BC12-656F35CE97CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{118516CE-3631-4553-BC12-656F35CE97CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{118516CE-3631-4553-BC12-656F35CE97CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{118516CE-3631-4553-BC12-656F35CE97CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +158,8 @@ Global
 		{7BF56FFB-ED00-42CE-9118-EB366D6A51A6} = {79133F90-413B-489E-A965-83F13A7944A3}
 		{96DCDBD6-C8DA-4A9C-9177-E6E78D8B8A83} = {79133F90-413B-489E-A965-83F13A7944A3}
 		{51E970B1-2E25-480C-ADA0-B715436E93DD} = {79133F90-413B-489E-A965-83F13A7944A3}
+		{5675FFDD-A477-4695-A2DA-CE2D2EC2A810} = {5F1A5DE0-F014-429F-A370-AF643D7BF600}
+		{118516CE-3631-4553-BC12-656F35CE97CA} = {5F1A5DE0-F014-429F-A370-AF643D7BF600}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC0BE93-F844-4FD4-AC26-C56EF6D9EC4F}
