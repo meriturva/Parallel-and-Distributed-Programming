@@ -8,12 +8,14 @@ using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using System;
 
-namespace DistributedAppWithMassTransitProducer
+namespace SagaWithMasstransitWebsite
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Website: Waiting");
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -35,7 +37,7 @@ namespace DistributedAppWithMassTransitProducer
             builder.Services.AddOpenTelemetry()
                 .ConfigureResource(r =>
                 {
-                    r.AddService("MassTransit Producer",
+                    r.AddService("MassTransit Website",
                                 serviceVersion: "MyVersion",
                                 serviceInstanceId: Environment.MachineName);
                 })
@@ -44,7 +46,6 @@ namespace DistributedAppWithMassTransitProducer
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
                     .AddSource(DiagnosticHeaders.DefaultListenerName) // MassTransit ActivitySource
-                    .AddConsoleExporter()
                     .AddOtlpExporter(opt =>
                     {
                         opt.Endpoint = new Uri("http://localhost:4317");
@@ -54,7 +55,6 @@ namespace DistributedAppWithMassTransitProducer
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
                     .AddMeter(InstrumentationOptions.MeterName)
-                    .AddConsoleExporter()
                     .AddOtlpExporter(opt =>
                     {
                         opt.Endpoint = new Uri("http://localhost:4317");

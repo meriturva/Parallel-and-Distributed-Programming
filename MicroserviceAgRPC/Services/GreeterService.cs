@@ -1,5 +1,4 @@
 using Grpc.Core;
-using MicroserviceAgRPC;
 
 namespace MicroserviceAgRPC.Services
 {

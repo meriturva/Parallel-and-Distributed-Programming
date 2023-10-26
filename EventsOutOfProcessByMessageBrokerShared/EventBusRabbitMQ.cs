@@ -1,8 +1,5 @@
 ﻿using ProtoBuf;
 using RabbitMQ.Client;
-using System;
-using System.Text;
-using System.Text.Json;
 
 namespace EventsOutOfProcessByMessageBrokerShared
 {

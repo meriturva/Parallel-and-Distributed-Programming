@@ -1,0 +1,31 @@
+version: '3.2'
+
+services:
+  rabbitmq:
+    image: rabbitmq:management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - net
+  redis:
+    image: redis:latest
+    command: redis-server
+    ports:
+      - 6379:6379
+    networks:
+      - net
+  # Observability
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - 16686:16686
+      - 4318:4318
+      - 4317:4317
+    command:
+      - "--collector.otlp.enabled"
+    networks:
+      - net
+
+networks:
+  net:

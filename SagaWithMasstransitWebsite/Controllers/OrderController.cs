@@ -1,9 +1,10 @@
-using DistributedAppWithMassTransitShared;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
+using SagaWithMasstransitShared;
+using System;
 using System.Threading.Tasks;
 
-namespace DistributedAppWithMassTransitProducer.Controllers
+namespace SagaWithMasstransitWebsite.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -23,20 +24,8 @@ namespace DistributedAppWithMassTransitProducer.Controllers
             var @event = new NewOrderEvent();
             @event.UserEmail = "diego@bonura.dev";
 
+            Console.WriteLine($"Start new order with id: {@event.OrderId}");
             await _bus.Publish(@event);
-        }
-
-        [HttpGet("massive")]
-        public async Task MassiveNewOrderAsync()
-        {
-            for (int i = 0; i < 1000; i++)
-            {
-                // Produce a new event and sent to channel
-                var @event = new NewOrderEvent();
-                @event.UserEmail = $"diego_{i}@bonura.dev";
-
-                await _bus.Publish(@event);
-            }
         }
     }
 }
