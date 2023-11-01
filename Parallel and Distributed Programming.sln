@@ -61,13 +61,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributedLockWithRedisB",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11", "11", "{156DEC39-73DC-4D69-A96D-41FFDBA756CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaWithMasstransitOrchestrator", "SagaWithMasstransitOrchestrator\SagaWithMasstransitOrchestrator.csproj", "{F717E2C7-5EED-4503-9E7D-338F5C95093B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaWithMasstransitOrchestrator", "SagaWithMasstransitOrchestrator\SagaWithMasstransitOrchestrator.csproj", "{F717E2C7-5EED-4503-9E7D-338F5C95093B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaWithMasstransitWebsite", "SagaWithMasstransitWebsite\SagaWithMasstransitWebsite.csproj", "{3B2374F1-E77F-49FE-A4B4-B581157345F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaWithMasstransitWebsite", "SagaWithMasstransitWebsite\SagaWithMasstransitWebsite.csproj", "{3B2374F1-E77F-49FE-A4B4-B581157345F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaWithMasstransitShared", "SagaWithMasstransitShared\SagaWithMasstransitShared.csproj", "{0F45F504-5AD2-4237-9AE1-0FD9121815E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaWithMasstransitShared", "SagaWithMasstransitShared\SagaWithMasstransitShared.csproj", "{0F45F504-5AD2-4237-9AE1-0FD9121815E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaWithMasstransitInventory", "SagaWithMasstransitInventory\SagaWithMasstransitInventory.csproj", "{15EE8769-9800-44BF-BB0F-AEF58C53ECB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaWithMasstransitInventory", "SagaWithMasstransitInventory\SagaWithMasstransitInventory.csproj", "{15EE8769-9800-44BF-BB0F-AEF58C53ECB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "12", "12", "{23DD884F-6F2D-423B-A7FC-62FF3F32D4F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansSilo", "MicrosoftOrleansSilo\MicrosoftOrleansSilo.csproj", "{7376CAF4-A43A-4723-BE7E-A00226CC5F48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13", "13", "{4329292D-051D-4791-9990-C6EC6C67FFFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansWebApp", "MicrosoftOrleansWebApp\MicrosoftOrleansWebApp.csproj", "{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansShared", "MicrosoftOrleansShared\MicrosoftOrleansShared.csproj", "{F980B7E6-CC98-4C99-ABA4-274562440CDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansConsoleSilo", "MicrosoftOrleansConsoleSilo\MicrosoftOrleansConsoleSilo.csproj", "{87584C3A-3B72-4883-9C43-7489E4EEC893}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14", "14", "{6DA93C28-B9AC-4098-A3A4-012AE91A16F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -163,6 +177,22 @@ Global
 		{15EE8769-9800-44BF-BB0F-AEF58C53ECB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15EE8769-9800-44BF-BB0F-AEF58C53ECB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15EE8769-9800-44BF-BB0F-AEF58C53ECB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7376CAF4-A43A-4723-BE7E-A00226CC5F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7376CAF4-A43A-4723-BE7E-A00226CC5F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7376CAF4-A43A-4723-BE7E-A00226CC5F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7376CAF4-A43A-4723-BE7E-A00226CC5F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F980B7E6-CC98-4C99-ABA4-274562440CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F980B7E6-CC98-4C99-ABA4-274562440CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F980B7E6-CC98-4C99-ABA4-274562440CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F980B7E6-CC98-4C99-ABA4-274562440CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87584C3A-3B72-4883-9C43-7489E4EEC893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87584C3A-3B72-4883-9C43-7489E4EEC893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87584C3A-3B72-4883-9C43-7489E4EEC893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87584C3A-3B72-4883-9C43-7489E4EEC893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -190,6 +220,10 @@ Global
 		{3B2374F1-E77F-49FE-A4B4-B581157345F0} = {156DEC39-73DC-4D69-A96D-41FFDBA756CD}
 		{0F45F504-5AD2-4237-9AE1-0FD9121815E7} = {156DEC39-73DC-4D69-A96D-41FFDBA756CD}
 		{15EE8769-9800-44BF-BB0F-AEF58C53ECB8} = {156DEC39-73DC-4D69-A96D-41FFDBA756CD}
+		{7376CAF4-A43A-4723-BE7E-A00226CC5F48} = {23DD884F-6F2D-423B-A7FC-62FF3F32D4F5}
+		{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633} = {4329292D-051D-4791-9990-C6EC6C67FFFD}
+		{F980B7E6-CC98-4C99-ABA4-274562440CDB} = {4329292D-051D-4791-9990-C6EC6C67FFFD}
+		{87584C3A-3B72-4883-9C43-7489E4EEC893} = {4329292D-051D-4791-9990-C6EC6C67FFFD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC0BE93-F844-4FD4-AC26-C56EF6D9EC4F}
