@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansConsoleSilo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14", "14", "{6DA93C28-B9AC-4098-A3A4-012AE91A16F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansDeadlock", "MicrosoftOrleansDeadlock\MicrosoftOrleansDeadlock.csproj", "{EE453540-1664-41A7-A9C7-51C6C8AF6999}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -193,6 +195,10 @@ Global
 		{87584C3A-3B72-4883-9C43-7489E4EEC893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87584C3A-3B72-4883-9C43-7489E4EEC893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87584C3A-3B72-4883-9C43-7489E4EEC893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE453540-1664-41A7-A9C7-51C6C8AF6999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE453540-1664-41A7-A9C7-51C6C8AF6999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE453540-1664-41A7-A9C7-51C6C8AF6999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE453540-1664-41A7-A9C7-51C6C8AF6999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -224,6 +230,7 @@ Global
 		{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633} = {4329292D-051D-4791-9990-C6EC6C67FFFD}
 		{F980B7E6-CC98-4C99-ABA4-274562440CDB} = {4329292D-051D-4791-9990-C6EC6C67FFFD}
 		{87584C3A-3B72-4883-9C43-7489E4EEC893} = {4329292D-051D-4791-9990-C6EC6C67FFFD}
+		{EE453540-1664-41A7-A9C7-51C6C8AF6999} = {6DA93C28-B9AC-4098-A3A4-012AE91A16F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC0BE93-F844-4FD4-AC26-C56EF6D9EC4F}
