@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace EventsOutOfProcessByDB.Controllers
+namespace EventsOutOfProcessByDatabaseProducer.Controllers
 {
     [ApiController]
     [Route("[controller]")]

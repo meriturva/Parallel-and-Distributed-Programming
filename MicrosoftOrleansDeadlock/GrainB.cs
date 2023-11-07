@@ -2,7 +2,7 @@ using Microsoft.Extensions.Logging;
 using Orleans;
 using System.Threading.Tasks;
 
-namespace MicrosoftOrleansSilo
+namespace MicrosoftOrleansDeadlock
 {
     public sealed class GrainB : Grain, IGrainB
     {
@@ -19,7 +19,7 @@ namespace MicrosoftOrleansSilo
             _logger.LogInformation("Start say Hello for {grainId}", id);
             await Task.Delay(1000);
 
-            var grainA = this.GrainFactory.GetGrain<IGrainA>(id);
+            var grainA = GrainFactory.GetGrain<IGrainA>(id);
 
             await grainA.SayHelloToGrainB();
 

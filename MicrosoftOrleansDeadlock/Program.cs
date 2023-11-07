@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using Orleans.Hosting;
 
-namespace SagaWithMasstransitWebsite
+namespace MicrosoftOrleansDeadlock
 {
     public class Program
     {
@@ -25,7 +25,7 @@ namespace SagaWithMasstransitWebsite
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();            
+            app.UseAuthorization();
 
             app.MapControllers();
 

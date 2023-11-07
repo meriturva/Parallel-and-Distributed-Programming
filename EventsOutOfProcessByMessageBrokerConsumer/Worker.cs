@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace EventsOutOfProcessByDatabaseConsumer
+namespace EventsOutOfProcessByMessageBrokerConsumer
 {
     class Worker : BackgroundService
     {

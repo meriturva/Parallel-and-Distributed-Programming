@@ -4,7 +4,7 @@ using Orleans;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SagaWithMasstransitWebsite.Controllers
+namespace MicrosoftOrleansSilo.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -32,7 +32,7 @@ namespace SagaWithMasstransitWebsite.Controllers
             {
                 var friend = _grainFactory.GetGrain<IHelloGrain>("user_1");
                 await friend.SayHello("Good morning!");
-            });          
+            });
         }
 
         [HttpGet("massiveDifferentIds")]

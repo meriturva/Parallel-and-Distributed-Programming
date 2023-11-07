@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace EventsOutOfProcessByDB
+namespace EventsOutOfProcessByDatabaseProducer
 {
     public class Program
     {

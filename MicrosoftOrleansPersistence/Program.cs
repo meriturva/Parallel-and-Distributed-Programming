@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using Orleans.Hosting;
+using StackExchange.Redis;
 
-namespace MicrosoftOrleansSilo
+namespace MicrosoftOrleansPersistence
 {
     public class Program
     {
@@ -19,6 +20,11 @@ namespace MicrosoftOrleansSilo
             builder.Host.UseOrleans(siloBuilder =>
             {
                 siloBuilder.UseLocalhostClustering();
+                siloBuilder.AddRedisGrainStorageAsDefault(options =>
+                {
+                    options.ConfigurationOptions = new ConfigurationOptions();
+                    options.ConfigurationOptions.EndPoints.Add("localhost", 6379);
+                });
             });
 
             var app = builder.Build();

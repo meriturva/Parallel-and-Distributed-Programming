@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using MicrosoftOrleansSilo;
 using Orleans;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SagaWithMasstransitWebsite.Controllers
+namespace MicrosoftOrleansDeadlock.Controllers
 {
     [ApiController]
     [Route("[controller]")]

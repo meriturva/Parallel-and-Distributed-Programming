@@ -71,19 +71,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaWithMasstransitInventor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "12", "12", "{23DD884F-6F2D-423B-A7FC-62FF3F32D4F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansSilo", "MicrosoftOrleansSilo\MicrosoftOrleansSilo.csproj", "{7376CAF4-A43A-4723-BE7E-A00226CC5F48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicrosoftOrleansSilo", "MicrosoftOrleansSilo\MicrosoftOrleansSilo.csproj", "{7376CAF4-A43A-4723-BE7E-A00226CC5F48}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13", "13", "{4329292D-051D-4791-9990-C6EC6C67FFFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansWebApp", "MicrosoftOrleansWebApp\MicrosoftOrleansWebApp.csproj", "{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicrosoftOrleansWebApp", "MicrosoftOrleansWebApp\MicrosoftOrleansWebApp.csproj", "{EC54E25B-0FB1-418C-AFEC-8C8FCC0B9633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansShared", "MicrosoftOrleansShared\MicrosoftOrleansShared.csproj", "{F980B7E6-CC98-4C99-ABA4-274562440CDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicrosoftOrleansShared", "MicrosoftOrleansShared\MicrosoftOrleansShared.csproj", "{F980B7E6-CC98-4C99-ABA4-274562440CDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansConsoleSilo", "MicrosoftOrleansConsoleSilo\MicrosoftOrleansConsoleSilo.csproj", "{87584C3A-3B72-4883-9C43-7489E4EEC893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicrosoftOrleansConsoleSilo", "MicrosoftOrleansConsoleSilo\MicrosoftOrleansConsoleSilo.csproj", "{87584C3A-3B72-4883-9C43-7489E4EEC893}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "14", "14", "{6DA93C28-B9AC-4098-A3A4-012AE91A16F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansDeadlock", "MicrosoftOrleansDeadlock\MicrosoftOrleansDeadlock.csproj", "{EE453540-1664-41A7-A9C7-51C6C8AF6999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicrosoftOrleansDeadlock", "MicrosoftOrleansDeadlock\MicrosoftOrleansDeadlock.csproj", "{EE453540-1664-41A7-A9C7-51C6C8AF6999}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "15", "15", "{BE4B280F-6986-4D9D-8D57-021F4D514D2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansPersistence", "MicrosoftOrleansPersistence\MicrosoftOrleansPersistence.csproj", "{6A44EC53-9084-4A39-AB1B-EF8B0E1ABF59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -199,6 +203,10 @@ Global
 		{EE453540-1664-41A7-A9C7-51C6C8AF6999}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE453540-1664-41A7-A9C7-51C6C8AF6999}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE453540-1664-41A7-A9C7-51C6C8AF6999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A44EC53-9084-4A39-AB1B-EF8B0E1ABF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A44EC53-9084-4A39-AB1B-EF8B0E1ABF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A44EC53-9084-4A39-AB1B-EF8B0E1ABF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A44EC53-9084-4A39-AB1B-EF8B0E1ABF59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -231,6 +239,7 @@ Global
 		{F980B7E6-CC98-4C99-ABA4-274562440CDB} = {4329292D-051D-4791-9990-C6EC6C67FFFD}
 		{87584C3A-3B72-4883-9C43-7489E4EEC893} = {4329292D-051D-4791-9990-C6EC6C67FFFD}
 		{EE453540-1664-41A7-A9C7-51C6C8AF6999} = {6DA93C28-B9AC-4098-A3A4-012AE91A16F8}
+		{6A44EC53-9084-4A39-AB1B-EF8B0E1ABF59} = {BE4B280F-6986-4D9D-8D57-021F4D514D2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC0BE93-F844-4FD4-AC26-C56EF6D9EC4F}

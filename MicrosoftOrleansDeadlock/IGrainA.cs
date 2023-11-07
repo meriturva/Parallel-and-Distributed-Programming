@@ -1,7 +1,7 @@
 ﻿using Orleans;
 using System.Threading.Tasks;
 
-namespace MicrosoftOrleansSilo
+namespace MicrosoftOrleansDeadlock
 {
     public interface IGrainA : IGrainWithStringKey
     {

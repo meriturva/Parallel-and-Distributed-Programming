@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Threading.Tasks;
 
-namespace EventsOutOfProcessByDatabaseConsumer
+namespace EventsOutOfProcessByMessageBrokerConsumer
 {
     internal class Program
     {

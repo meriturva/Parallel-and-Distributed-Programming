@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using MicrosoftOrleansShared;
 using Orleans;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MicrosoftOrleansWebApp.Controllers
+namespace MicrosoftOrleansPersistence.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -39,7 +38,7 @@ namespace MicrosoftOrleansWebApp.Controllers
         public async Task SayHelloToDifferentsIdsAsync()
         {
 
-            await Parallel.ForEachAsync(Enumerable.Repeat(true, 500).Select((x, i) => i), async (i, _) =>
+            await Parallel.ForEachAsync(Enumerable.Repeat(true, 100).Select((x, i) => i), async (i, _) =>
             {
                 var friend = _grainFactory.GetGrain<IHelloGrain>($"user_{i}");
                 await friend.SayHello("Good morning!");
