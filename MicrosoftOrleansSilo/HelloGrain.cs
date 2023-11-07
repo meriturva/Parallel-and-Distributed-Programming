@@ -7,6 +7,7 @@ namespace MicrosoftOrleansSilo
     public sealed class HelloGrain : Grain, IHelloGrain
     {
         private readonly ILogger<HelloGrain> _logger;
+        private int counter = 0;
 
         public HelloGrain(ILogger<HelloGrain> logger)
         {
@@ -15,7 +16,8 @@ namespace MicrosoftOrleansSilo
 
         public async Task<string> SayHello(string greeting)
         {
-            _logger.LogInformation("Start say Hello for {grainId}", IdentityString);
+            counter++;
+            _logger.LogInformation("Start say Hello for {grainId} with counter {counter}", IdentityString, counter);
             await Task.Delay(1000);
             return $"Hello, {greeting}!";
         }
