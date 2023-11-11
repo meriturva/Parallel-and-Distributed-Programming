@@ -3,6 +3,7 @@ using Orleans;
 using Orleans.Runtime;
 using Orleans.Streams;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace MicrosoftOrleansStreams.Grains
@@ -28,8 +29,7 @@ namespace MicrosoftOrleansStreams.Grains
 
             // Get the stream
             var streamId = StreamId.Create(ns, key);
-            _stream = this.GetStreamProvider("StreamProvider")
-                .GetStream<int>(streamId);
+            _stream = this.GetStreamProvider("StreamProvider").GetStream<int>(streamId);
 
             // Register a timer that produce an event every second
             var period = TimeSpan.FromMilliseconds(500);
