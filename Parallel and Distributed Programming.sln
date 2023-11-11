@@ -93,6 +93,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "16", "16", "{EEB72F9F-A0D6-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicrosoftOrleansStreams", "MicrosoftOrleansStreams\MicrosoftOrleansStreams.csproj", "{AADE76A1-72BB-47AE-A5D2-1EC05444671F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "17", "17", "{E7611A25-1140-4053-AD44-8B7C013C893C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftOrleansTransactions", "MicrosoftOrleansTransactions\MicrosoftOrleansTransactions.csproj", "{C985BFDF-81AA-447F-BF0D-A016B878628D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +219,10 @@ Global
 		{AADE76A1-72BB-47AE-A5D2-1EC05444671F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AADE76A1-72BB-47AE-A5D2-1EC05444671F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AADE76A1-72BB-47AE-A5D2-1EC05444671F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C985BFDF-81AA-447F-BF0D-A016B878628D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C985BFDF-81AA-447F-BF0D-A016B878628D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C985BFDF-81AA-447F-BF0D-A016B878628D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C985BFDF-81AA-447F-BF0D-A016B878628D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -249,6 +257,7 @@ Global
 		{EE453540-1664-41A7-A9C7-51C6C8AF6999} = {6DA93C28-B9AC-4098-A3A4-012AE91A16F8}
 		{6A44EC53-9084-4A39-AB1B-EF8B0E1ABF59} = {BE4B280F-6986-4D9D-8D57-021F4D514D2E}
 		{AADE76A1-72BB-47AE-A5D2-1EC05444671F} = {EEB72F9F-A0D6-4E16-B2CD-E09D24896BE8}
+		{C985BFDF-81AA-447F-BF0D-A016B878628D} = {E7611A25-1140-4053-AD44-8B7C013C893C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC0BE93-F844-4FD4-AC26-C56EF6D9EC4F}
