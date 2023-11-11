@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Logging;
 using Orleans;
 using Orleans.Runtime;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MicrosoftOrleansPersistence
@@ -18,6 +19,11 @@ namespace MicrosoftOrleansPersistence
             _helloState = helloState;
         }
 
+        public override Task OnActivateAsync(CancellationToken cancellationToken)
+        {
+            return base.OnActivateAsync(cancellationToken);
+        }
+
         public async Task<string> SayHello(string greeting)
         {
             _helloState.State.Counter++;
@@ -26,7 +32,14 @@ namespace MicrosoftOrleansPersistence
 
             // Store state
             await _helloState.WriteStateAsync();
+
+            //DeactivateOnIdle();
             return $"Hello, {greeting}!";
+        }
+
+        public override Task OnDeactivateAsync(DeactivationReason reason, CancellationToken cancellationToken)
+        {
+            return base.OnDeactivateAsync(reason, cancellationToken);
         }
     }
 }
