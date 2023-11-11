@@ -14,6 +14,7 @@ namespace AccountTransfer.Grains
         public int Value { get; set; } = 1_000;
     }
 
+    [Reentrant]
     public sealed class AccountGrain : Grain, IAccountGrain
     {
         private readonly ITransactionalState<Balance> _balance;
