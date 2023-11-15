@@ -33,7 +33,7 @@ namespace MicrosoftOrleansPersistence
             // Store state
             await _helloState.WriteStateAsync();
 
-            //DeactivateOnIdle();
+            DeactivateOnIdle();
             return $"Hello, {greeting}!";
         }
 
