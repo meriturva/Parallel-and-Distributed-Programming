@@ -1,4 +1,5 @@
-﻿using NBomber.CSharp;
+﻿using NBomber.Contracts.Stats;
+using NBomber.CSharp;
 using NBomber.Http;
 using NBomber.Http.CSharp;
 using NBomber.Plugins.Network.Ping;
@@ -31,10 +32,7 @@ namespace MicrosoftRateLimitBomber
 
             NBomberRunner
                 .RegisterScenarios(scenario)
-                .WithWorkerPlugins(
-                    new PingPlugin(PingPluginConfig.CreateDefault("nbomber.com")),
-                    new HttpMetricsPlugin(new[] { HttpVersion.Version1 })
-                )
+                .WithReportFormats(ReportFormat.Html)
                 .Run();
         }
     }
