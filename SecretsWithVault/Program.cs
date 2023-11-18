@@ -10,8 +10,6 @@ namespace SecretsWithVault
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-
             // Initialize one of the several auth methods.
             IAuthMethodInfo authMethod = new TokenAuthMethodInfo("testtoken");
 
