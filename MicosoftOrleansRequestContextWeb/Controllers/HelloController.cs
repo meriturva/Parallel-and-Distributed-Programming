@@ -2,7 +2,6 @@ using MicosoftOrleansRequestContextShared;
 using Microsoft.AspNetCore.Mvc;
 using Orleans;
 using Orleans.Runtime;
-using System;
 using System.Threading.Tasks;
 
 namespace MicrosoftOrleansWebApp.Controllers
