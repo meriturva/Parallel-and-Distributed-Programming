@@ -18,7 +18,7 @@ namespace SecretsWithVault
 
             IVaultClient vaultClient = new VaultClient(vaultClientSettings);
 
-            var myKeys = await vaultClient.V1.Secrets.Cubbyhole.ReadSecretAsync("my-path");
+            var myKeys = await vaultClient.V1.Secrets.Cubbyhole.ReadSecretAsync("my-secrets");
         }
     }
 }
