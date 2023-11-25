@@ -125,6 +125,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspire.ServiceDefaults", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspire.Web", "Aspire\aspire.Web\aspire.Web.csproj", "{B50AA7A8-AD74-4DFF-8779-193D8B9FBCEF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "22", "22", "{1313C91F-71A4-4574-AF76-EC7DECA2B49C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
