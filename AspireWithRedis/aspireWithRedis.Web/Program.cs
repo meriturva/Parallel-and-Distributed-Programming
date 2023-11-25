@@ -1,10 +1,13 @@
-using aspire.Web;
-using aspire.Web.Components;
+using aspireWithRedis.ServiceDefaults;
+using aspireWithRedis.Web;
+using aspireWithRedis.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
+
+builder.AddRedisOutputCache("cache");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -22,6 +25,8 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseAntiforgery();
+
+app.UseOutputCache();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
