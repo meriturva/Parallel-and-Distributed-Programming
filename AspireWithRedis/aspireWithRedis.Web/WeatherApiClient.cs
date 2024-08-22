@@ -1,3 +1,8 @@
+using System;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
+
 namespace aspireWithRedis.Web;
 
 public class WeatherApiClient(HttpClient httpClient)

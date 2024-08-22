@@ -1,4 +1,6 @@
 using EventsOutOfProcessByMessageBrokerShared;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EventsOutOfProcessByMessageBrokerProducer
 {

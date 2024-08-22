@@ -1,5 +1,6 @@
 ﻿
 using ProtoBuf;
+using System;
 
 namespace EventsOutOfProcessByMessageBrokerShared
 {

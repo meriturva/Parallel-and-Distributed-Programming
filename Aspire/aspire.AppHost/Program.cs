@@ -1,3 +1,5 @@
+using Aspire.Hosting;
+
 var builder = DistributedApplication.CreateBuilder(args);
 
 var apiservice = builder.AddProject<Projects.aspire_ApiService>("apiservice");

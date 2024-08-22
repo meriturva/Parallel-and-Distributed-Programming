@@ -1,4 +1,8 @@
 using aspireWithRedis.ServiceDefaults;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Linq;
 
 var builder = WebApplication.CreateBuilder(args);
 
