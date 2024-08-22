@@ -11,7 +11,7 @@ namespace ProjectToTest.Tests
         {
             // ARRANGE
             var service = Substitute.For<IAService>();
-            service.GetCoundFromDataBase().Returns(5);
+            service.GetCountFromDataBase().Returns(5);
 
             var helloGrain = new HelloGrainUsingAService(service);
 

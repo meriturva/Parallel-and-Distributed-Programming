@@ -17,7 +17,7 @@ namespace SagaWithMasstransitInventory
 
         public async Task Consume(ConsumeContext<ProcessOrder> context)
         {
-            _logger.LogInformation("Processing order", context.Message.OrderId);
+            _logger.LogInformation("Processing order {orderId}", context.Message.OrderId);
 
             await Task.Delay(10000);
 
@@ -30,7 +30,7 @@ namespace SagaWithMasstransitInventory
                 await context.RespondAsync(new OrderCancelled(context.Message.OrderId, "Item not available"));
             }
 
-            _logger.LogInformation("Processed order", context.Message.OrderId);
+            _logger.LogInformation("Processed order {orderId}", context.Message.OrderId);
         }
     }
 }

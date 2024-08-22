@@ -4,6 +4,6 @@ namespace ProjectToTest
 {
     public interface IAService
     {
-        Task<int> GetCoundFromDataBase();
+        Task<int> GetCountFromDataBase();
     }
 }

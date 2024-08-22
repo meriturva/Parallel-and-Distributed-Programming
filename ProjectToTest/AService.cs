@@ -4,7 +4,7 @@ namespace ProjectToTest
 {
     public class AService : IAService
     {
-        public async Task<int> GetCoundFromDataBase()
+        public async Task<int> GetCountFromDataBase()
         {
             await Task.CompletedTask;
             return 10;

@@ -14,7 +14,7 @@ namespace ProjectToTest
 
         public async Task<int> Count()
         {
-            return await _service.GetCoundFromDataBase();
+            return await _service.GetCountFromDataBase();
         }
     }
 }

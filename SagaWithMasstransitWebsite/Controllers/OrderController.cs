@@ -20,7 +20,7 @@ namespace SagaWithMasstransitWebsite.Controllers
         [HttpGet]
         public async Task NewOrderAsync()
         {
-            // Produce a new event and sent to channel
+            // Produce and publish new event
             var @event = new NewOrderEvent();
             @event.UserEmail = "diego@bonura.dev";
 

@@ -28,7 +28,7 @@ namespace EventsOutOfProcessByDatabaseConsumer
                   {
                       // Add services to the container.
                       services.AddDbContext<EventBusContext>(
-                          options => options.UseSqlServer(@"Server=localhost,1433;Database=EventBus;User Id=sa;Password=Unicam123!;")
+                          options => options.UseSqlServer(@"Server=localhost,1433;Database=EventBus;User Id=sa;Password=Unicam123!;TrustServerCertificate=true")
                       );
 
                       services.AddMediatR(cfg =>

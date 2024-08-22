@@ -5,17 +5,19 @@ namespace ProjectToTest.Tests
 {
     public class HelloGrainTests
     {
-        [Fact]
-        public async Task TestSayHello()
+        [Theory]
+        [InlineData("Diego", "Hello, Diego!")]
+        [InlineData("", "Hello, !")]
+        public async Task TestSayHello(string name, string expectedValue)
         {
             // ARRANGE
             var helloGrain = new HelloGrain();
 
             // ACT
-            var result = await helloGrain.SayHello("Diego");
+            var result = await helloGrain.SayHello(name);
 
             // ASSERT
-            Assert.Equal("Hello, Diego!", result);
+            Assert.Equal(expectedValue, result);
         }
     }
 }
