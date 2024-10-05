@@ -28,9 +28,9 @@ namespace EventsOutOfProcessByDatabaseConsumer
                 if (messageToElaborate != null)
                 {
                     var type = AppDomain.CurrentDomain.GetAssemblies().Where(a => !a.IsDynamic).SelectMany(a => a.GetTypes()).FirstOrDefault(t => t.FullName == messageToElaborate.Type);
-                    var domainEvent = (INotification)JsonSerializer.Deserialize(messageToElaborate.Content, type);
+                    var domainEvent = (INotification)JsonSerializer.Deserialize(messageToElaborate.Content, type)!;
 
-                    await _publisher.Publish(domainEvent);
+                    await _publisher.Publish(domainEvent, stoppingToken);
 
                     messageToElaborate.ProcessedOn = DateTime.Now;
                     await _eventBusContext.SaveChangesAsync();
