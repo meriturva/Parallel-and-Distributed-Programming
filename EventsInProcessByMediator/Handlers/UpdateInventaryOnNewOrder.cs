@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace EventsInProcessByMediator.Handlers
 {
-    public class SendEmailOnNewUpdateInventaryOnNewOrderOrder : INotificationHandler<NewOrderEvent>
+    public class UpdateInventaryOnNewOrderOrder : INotificationHandler<NewOrderEvent>
     {
         public async Task Handle(NewOrderEvent request, CancellationToken cancellationToken)
         {
