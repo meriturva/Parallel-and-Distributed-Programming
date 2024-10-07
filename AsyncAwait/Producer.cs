@@ -11,10 +11,10 @@ namespace AsyncAwait
             int i = 0;
             while (true)
             {
-                //var result = await consumer.ElaborateAsync(i, i);
-                //Console.WriteLine($"Counter: {i} with result: {result}");
+                var result = await consumer.ElaborateAsync(i, i);
+                Console.WriteLine($"Counter: {i} with result: {result}");
 
-                // Two task
+                // Two tasks
                 //var result1 = await consumer.ElaborateAsync(i, i);
                 //Console.WriteLine($"Counter1: {i} with result: {result1}");
                 //var result2 = await consumer.ElaborateAsync(i, i);
@@ -29,11 +29,11 @@ namespace AsyncAwait
                 //Console.WriteLine($"Counter2: {i} with result: {result.Result}");
 
                 // Two task in parallel
-                var taskResult1 = consumer.ElaborateAsync(i, i);
-                var taskResult2 = consumer.ElaborateAsync(i, i);
-                Task.WaitAll(new Task[] { taskResult1, taskResult2 });
-                Console.WriteLine($"Counter1: {i} with result: {taskResult1.Result}");
-                Console.WriteLine($"Counter2: {i} with result: {taskResult2.Result}");
+                //var taskResult1 = consumer.ElaborateAsync(i, i);
+                //var taskResult2 = consumer.ElaborateAsync(i, i);
+                //Task.WaitAll(new Task[] { taskResult1, taskResult2 });
+                //Console.WriteLine($"Counter1: {i} with result: {taskResult1.Result}");
+                //Console.WriteLine($"Counter2: {i} with result: {taskResult2.Result}");
                 i++;
             }
         }
