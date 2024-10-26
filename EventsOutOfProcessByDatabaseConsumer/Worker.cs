@@ -36,7 +36,7 @@ namespace EventsOutOfProcessByDatabaseConsumer
                     await _eventBusContext.SaveChangesAsync();
                 }
 
-                await Task.Delay(1000);
+                await Task.Delay(100);
             }
         }
 
