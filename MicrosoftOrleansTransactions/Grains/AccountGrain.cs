@@ -26,7 +26,10 @@ namespace AccountTransfer.Grains
 
         public async Task Deposit(int amount)
         {
-            await _balance.PerformUpdate(balance => balance.Value += amount);
+            await _balance.PerformUpdate(balance =>
+            {
+                balance.Value += amount;
+            });
         }
 
         public async Task Withdraw(int amount)
