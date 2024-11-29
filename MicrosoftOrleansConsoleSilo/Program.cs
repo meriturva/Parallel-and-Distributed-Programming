@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
-using System.Threading.Tasks;
-using Orleans.Hosting;
 using Orleans;
+using Orleans.Hosting;
+using System.Threading.Tasks;
 
 namespace MicrosoftOrleansConsoleSilo
 {

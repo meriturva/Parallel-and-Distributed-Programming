@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Orleans;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MicrosoftOrleansDeadlock.Controllers

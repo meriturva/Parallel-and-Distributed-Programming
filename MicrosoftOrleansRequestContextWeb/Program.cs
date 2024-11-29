@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
 using Orleans.Hosting;
+using System;
 
 namespace MicrosoftOrleansWebApp
 {

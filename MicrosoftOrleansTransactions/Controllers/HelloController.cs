@@ -2,7 +2,6 @@ using AccountTransfer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Orleans;
 using System;
-using System.Security.Principal;
 using System.Threading.Tasks;
 
 namespace MicrosoftOrleansWebApp.Controllers

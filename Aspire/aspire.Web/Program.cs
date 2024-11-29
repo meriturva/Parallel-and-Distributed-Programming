@@ -13,7 +13,7 @@ builder.AddServiceDefaults();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddHttpClient<WeatherApiClient>(client=> client.BaseAddress = new("https+http://apiservice"));
+builder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = new("https+http://apiservice"));
 
 var app = builder.Build();
 
@@ -28,7 +28,7 @@ app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
-    
+
 app.MapDefaultEndpoints();
 
 app.Run();

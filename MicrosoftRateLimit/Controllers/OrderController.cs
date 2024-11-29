@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace MicrosoftRateLimit.Controllers

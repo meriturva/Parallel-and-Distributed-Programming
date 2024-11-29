@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using VaultSharp;
 using VaultSharp.V1.AuthMethods;
 using VaultSharp.V1.AuthMethods.Token;
