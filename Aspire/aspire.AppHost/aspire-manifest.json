@@ -1,11 +1,15 @@
 {
+  "$schema": "https://json.schemastore.org/aspire-8.0.json",
   "resources": {
     "apiservice": {
       "type": "project.v0",
-      "path": "..\\aspire.ApiService\\aspire.ApiService.csproj",
+      "path": "../aspire.ApiService/aspire.ApiService.csproj",
       "env": {
         "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
-        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true"
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true",
+        "HTTP_PORTS": "{apiservice.bindings.http.targetPort}"
       },
       "bindings": {
         "http": {
@@ -22,12 +26,15 @@
     },
     "webfrontend": {
       "type": "project.v0",
-      "path": "..\\aspire.Web\\aspire.Web.csproj",
+      "path": "../aspire.Web/aspire.Web.csproj",
       "env": {
         "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
         "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
-        "services__apiservice__0": "{apiservice.bindings.http.url}",
-        "services__apiservice__1": "{apiservice.bindings.https.url}"
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true",
+        "HTTP_PORTS": "{webfrontend.bindings.http.targetPort}",
+        "services__apiservice__http__0": "{apiservice.bindings.http.url}",
+        "services__apiservice__https__0": "{apiservice.bindings.https.url}"
       },
       "bindings": {
         "http": {
